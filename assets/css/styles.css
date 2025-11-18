@@ -1,15 +1,27 @@
-/* NAVBAR */
+body {
+    color: #222;     
+    background: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+
+/* BARRA NAVEGACION */
 .navbar {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    background: #121212;
-    padding: 15px 30px;
     align-items: center;
+    background: #121212;
+    padding: 10px 20px;
+    box-sizing: border-box; 
+    overflow-x: hidden;     
+    flex-wrap: nowrap;     
 }
 
 .logo {
-    height: 50px;
+    max-height: 70px;    
+    width: auto;        
+    flex-shrink: 0;     
 }
 
 .nav-links {
@@ -29,13 +41,53 @@
 }
 
 /* BANNER */
+/* BANNER */
 .banner {
     background: url('../img/banner-ofertas.jpg');
     background-size: cover;
     background-position: center;
-    padding: 100px 20px;
+    padding: 120px 20px;
     text-align: center;
     color: #fff;
+    position: relative;
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 0;
+}
+
+.banner h2,
+.banner p {
+    position: relative;
+    z-index: 1;
+}
+
+/* titulo más llamativoo */
+.banner h2 {
+    font-size: 48px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-shadow: 0 3px 8px rgba(0,0,0,0.7);
+}
+
+.banner p {
+    font-size: 22px;
+    margin-top: 10px;
+    font-weight: 500;
+    color: #ffefef;
+}
+
+
+
+h3 {
+    color: #222;
+    font-size: 26px;
+    margin-bottom: 15px;
+    text-align: center;
 }
 
 /* MARCAS */
@@ -134,4 +186,98 @@
     background: #121212;
     color: #fff;
     text-align: center;
+}
+
+
+
+
+
+/* SECCION DE DETALLE DEL PRODUCTO HTML */
+
+/* PÁGINA PRODUCTO */
+.producto-detalle {
+    display: flex;
+    gap: 40px;
+    padding: 50px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.producto-img {
+    flex: 1;
+    max-width: 450px;
+}
+
+.img-principal {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+}
+
+.producto-info {
+    flex: 1;
+    max-width: 500px;
+}
+
+.producto-nombre {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.producto-precio {
+    font-size: 26px;
+    color: #ff3b3b;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.producto-descripcion {
+    font-size: 17px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.volver {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 18px;
+    background: #555;
+}
+
+.volver:hover {
+    background: #333;
+}
+
+/* CARRITO */
+.carrito-section {
+    padding: 40px;
+}
+
+#carrito-lista {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.carrito-item {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.carrito-item:last-child {
+    border-bottom: none;
+}
+
+.pagar {
+    width: 200px;
+    display: block;
+    margin: auto;
+    font-size: 18px;
 }

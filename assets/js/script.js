@@ -1,0 +1,1 @@
+console.log("MotoMoto Frontend cargado correctamente");

@@ -1,43 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Producto - MotoMoto</title>
-    <link rel="stylesheet" href="styles/style.css">
-</head>
-
-<body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <title>MotoMoto - Producto</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
     <nav class="navbar">
-        <img src="img/logo.png" class="logo" alt="MotoMoto">
-        <ul class="nav-links">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="#">Carrito</a></li>
-        </ul>
+      <img src="assets/img/logo.png" class="logo" alt="MotoMoto" />
+
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="index.html#ofertas">Ofertas</a></li>
+        <li><a href="index.html#productos">Productos</a></li>
+        <li><a href="carrito.html">Carrito</a></li>
+      </ul>
     </nav>
 
-    <div class="producto-container">
+    <!-- Contenido cargado dinámicamente -->
+    <section class="producto-detalle">
+      <div class="producto-img">
+        <img id="producto-imagen" class="img-principal" src="" alt="Producto" />
+      </div>
 
-        <div class="producto-img">
-            <img src="img/productos/casco1.jpg" class="img-principal">
-        </div>
+      <div class="producto-info">
+        <h2 id="producto-nombre"></h2>
+        <p id="producto-precio" class="producto-precio"></p>
+        <p id="producto-descripcion" class="producto-descripcion"></p>
 
-        <div class="producto-info">
-            <h2>Casco Integral X1</h2>
-            <p class="precio">$59.990</p>
-
-            <p class="descripcion">
-               Casco integral con certificación DOT. Ventilación optimizada y visor anti-empañante.
-            </p>
-
-            <button class="btn2">Agregar al carrito</button>
-        </div>
-
-    </div>
+        <button class="btn2">Agregar al carrito</button>
+        <a href="index.html" class="btn volver">⬅ Volver</a>
+      </div>
+    </section>
 
     <footer class="footer">
-        <p>MotoMoto © 2025</p>
+      <p>MotoMoto © 2025</p>
     </footer>
 
-</body>
+    <script src="assets/js/producto.js"></script>
+  </body>
 </html>
