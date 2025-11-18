@@ -14,15 +14,19 @@
             <li><a href="index.html">Inicio</a></li>
             <li><a href="index.html#ofertas">Ofertas</a></li>
             <li><a href="index.html#productos">Productos</a></li>
-            <li><a href="carrito.html">Carrito</a></li>
+            <li><a class="carrito-link" href="carrito.html">Carrito</a></li>
         </ul>
     </nav>
 
     <section class="carrito-section">
-        <h2>🛒 Tu Carrito</h2>
+        <h2> Carrito De Compras</h2>
         <div id="carrito-lista"></div>
 
-        <button id="btn-pagar" class="btn2 pagar">Pagar</button>
+<!-- total a "pagar" -->
+<div id="carrito-total" class="carrito-total"></div>
+
+<button id="btn-vaciar" class="btn btn-warning w-100 mb-3">Vaciar carrito</button>
+<button id="btn-pagar" class="btn2 pagar">Pagar en un Click</button>
     </section>
 
     <footer class="footer">

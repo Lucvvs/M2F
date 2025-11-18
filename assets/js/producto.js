@@ -1,47 +1,61 @@
-// 1. Base de datos simple de productos
+// variables de productos
 const productos = [
     {
         id: 1,
-        nombre: "Casco Integral X1",
+        nombre: "Casco SHAFT SP502",
         precio: 59990,
         descripcion: "Casco integral con certificación DOT, visor antiempañante y ventilación optimizada.",
         imagen: "assets/img/casco1.png"
     },
     {
         id: 2,
-        nombre: "Guantes Racing Pro",
+        nombre: "Guantes Racing ALPINESTAR",
         precio: 24990,
         descripcion: "Guantes de protección reforzada, ventilación y agarre premium para conducción segura.",
         imagen: "assets/img/guantes1.png"
     },
     {
         id: 3,
-        nombre: "Mochila Impermeable",
+        nombre: "Mochila Impermeable MOTOCENTRIC 35L",
         precio: 34990,
         descripcion: "Mochila resistente al agua con 28L de capacidad y correas ajustables.",
-        imagen: "assets/img/mochila1.png"
+        imagen: "assets/img/mochile1.png"
     }
 ];
 
-// 2. Obtener ID desde la URL
+// Obtener ID 
 const params = new URLSearchParams(window.location.search);
 const id = parseInt(params.get("id"));
 
-// 3. Buscar el producto correspondiente
 const producto = productos.find(p => p.id === id);
 
-// 4. Si no existe, mostrar error
+// DOM
+const nombreEl = document.getElementById("producto-nombre");
+const precioEl = document.getElementById("producto-precio");
+const descEl   = document.getElementById("producto-descripcion");
+const imgEl    = document.getElementById("producto-imagen");
+const btnAgregar = document.querySelector(".producto-info .btn2");
+
 if (!producto) {
     document.body.innerHTML = "<h2 style='text-align:center'>Producto no encontrado</h2>";
 } else {
+ 
+    nombreEl.textContent = producto.nombre;
+    precioEl.textContent = "$" + producto.precio.toLocaleString("es-CL");
+    descEl.textContent   = producto.descripcion;
+    imgEl.src            = producto.imagen;
 
-    // 5. Insertar datos en el HTML
-    document.getElementById("producto-nombre").textContent = producto.nombre;
+    // Evento para agregar al carrito en DETALLE_PRODUCTO
+    btnAgregar.addEventListener("click", () => {
+        let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
-    document.getElementById("producto-precio").textContent = 
-        "$" + producto.precio.toLocaleString("es-CL");
+        carrito.push({
+            nombre: producto.nombre,
+            precio: producto.precio
+        });
 
-    document.getElementById("producto-descripcion").textContent = producto.descripcion;
+        localStorage.setItem("carrito", JSON.stringify(carrito));
 
-    document.getElementById("producto-imagen").src = producto.imagen;
+        alert("Producto agregado al carrito 🛒");
+    });
 }

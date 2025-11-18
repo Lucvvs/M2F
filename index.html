@@ -3,30 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <title>MotoMoto - Tienda de Accesorios</title>
+
+    <!-- Bootstrap CSS -->
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
+        rel="stylesheet">
+
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
 
     <!-- NAVBAR -->
     <nav class="navbar">
-        <img src="assets/img/logo.png" class="logo" alt="MotoMoto">
-        <ul class="nav-links">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="#ofertas">Ofertas</a></li>
-            <li><a href="#productos">Productos</a></li>
-            <li><a href="#">Carrito</a></li>
-        </ul>
+      <img src="assets/img/logo.png" class="logo" alt="MotoMoto" />
+
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="index.html#ofertas">Ofertas</a></li>
+        <li><a href="index.html#productos">Productos</a></li>
+        <li><a class="carrito-link" href="carrito.html">Carrito</a></li>
+      </ul>
     </nav>
 
     <!-- BANNER OFERTAS -->
-    <section id="ofertas" class="banner">
-        <h2>🔥 Ofertas de la Semana</h2>
-        <p>Accesorios para tu moto hasta un 40% OFF</p>
+    <section id="ofertas" class="banner text-center">
+        <h2 class="fw-bold">Ofertas de la Semana</h2>
+        <p class="lead">Accesorios para tu moto hasta un 40% OFF</p>
     </section>
 
     <!-- MARCAS -->
-    <section class="marcas">
-        <h3>Solo con las mejores marcas del mercado</h3>
+    <section class="marcas container">
+        <h3 class="text-center mt-4">Solo con las mejores marcas del mundo</h3>
         <div class="scroll-marcas">
             <img src="assets/img/yamaha.png">
             <img src="assets/img/ls2.png">
@@ -38,44 +45,57 @@
     </section>
 
     <!-- LISTADO DE PRODUCTOS -->
-    <section id="productos" class="productos">
-        <h3>Productos Destacados</h3>
+    <section id="productos" class="productos container">
+    <h3 class="text-center mb-4">Productos En Stock</h3>
 
-        <div class="productos-grid">
+    <div class="row g-4">
 
-            <div class="card">
-    <img src="assets/img/casco1.png">
-    <h4>Casco Integral X1</h4>
-    <p class="precio">$59.990</p>
-    <a href="producto.html?id=1" class="btn">Ver producto</a>
-    <button class="btn2">Agregar al carrito</button>
-</div>
-
-<div class="card">
-    <img src="assets/img/guantes1.png">
-    <h4>Guantes Racing Pro</h4>
-    <p class="precio">$24.990</p>
-    <a href="producto.html?id=2" class="btn">Ver producto</a>
-    <button class="btn2">Agregar al carrito</button>
-</div>
-
-<div class="card">
-    <img src="assets/img/mochile1.png">
-    <h4>Mochila Impermeable</h4>
-    <p class="precio">$34.990</p>
-    <a href="producto.html?id=3" class="btn">Ver producto</a>
-    <button class="btn2">Agregar al carrito</button>
-</div>
-
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="card product-card">
+                <img src="assets/img/casco1.png" class="card-img-top">
+                <h4>Casco SHAFT SP502</h4>
+                <p class="precio">$59.990 CLP</p>
+                <a href="producto.html?id=1" class="btn btn-primary w-100">Ver producto</a>
+                <button class="btn2 w-100 mt-2">Agregar al carrito</button>
+            </div>
         </div>
-    </section>
+
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="card product-card">
+                <img src="assets/img/guantes1.png" class="card-img-top">
+                <h4>Guantes Racing ALPINESTAR</h4>
+                <p class="precio">$24.990</p>
+                <a href="producto.html?id=2" class="btn btn-primary w-100">Ver producto</a>
+                <button class="btn2 w-100 mt-2">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="card product-card">
+                <img src="assets/img/mochile1.png" class="card-img-top">
+                <h4>Mochila Impermeable MOTOCENTRIC 35L</h4>
+                <p class="precio">$34.990</p>
+                <a href="producto.html?id=3" class="btn btn-primary w-100">Ver producto</a>
+                <button class="btn2 w-100 mt-2">Agregar al carrito</button>
+            </div>
+        </div>
+
+    </div>
+</section>
 
     <!-- FOOTER -->
-    <footer class="footer">
+    <footer class="footer text-center">
         <p>MotoMoto © 2025 - Accesorios para motociclistas</p>
-        <p>Contacto: ventas@motomoto.cl</p>
+        <p>Contacto: motomoto@gmail.com</p>
+        <p>Av. Providencia #3131</p>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="assets/js/script.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script 
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+    </script>
+
 </body>
 </html>

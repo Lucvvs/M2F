@@ -119,8 +119,6 @@ h3 {
 }
 
 .productos-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
     gap: 25px;
 }
 
@@ -280,4 +278,37 @@ h3 {
     display: block;
     margin: auto;
     font-size: 18px;
+}
+
+
+.carrito-link {
+    background: linear-gradient(45deg, #ffcc00, #ff9900);
+    padding: 8px 14px;
+    border-radius: 6px;
+    color: #121212 !important;
+    font-weight: 700;
+}
+
+.carrito-link:hover {
+    background: linear-gradient(45deg, #ffdd33, #ffaa22);
+    color: #000 !important;
+}
+
+
+.carrito-total {
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: right;
+    margin-top: 15px;
+    padding: 12px;
+    background: #fff4cc;
+    border: 2px solid #ffcc00;
+    border-radius: 8px;
+    color: #333;
+}
+
+#btn-vaciar {
+    font-weight: bold;
+    border-radius: 8px;
 }
